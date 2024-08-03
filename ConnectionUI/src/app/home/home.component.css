@@ -1,0 +1,71 @@
+  .top-bar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .user-info {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  
+  .user-info span {
+    margin-left: 10px;
+  }
+  
+  .carousel-container {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px; /* Space for score board */
+  }
+  
+  .carousel {
+    width: 100%;
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .slide-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .answer-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .answer-section input {
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .answer-section button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .answer-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-container {
+      width: 90%;
+    }
+  }
+  

@@ -1,0 +1,52 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* You can use any cool font you like */
+}
+
+.background-container {
+  background-image: url('../../assets/movback.jpg'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%; /* Adjust width as necessary */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Light color buttons */
+  color: #333; /* Dark text for contrast */
+  border: 2px solid #ddd; /* Light gray border for definition */
+  padding: 15px 30px; /* Increased padding for larger buttons */
+  font-size: 18px; /* Increased font size for larger text */
+  border-radius: 8px; /* Slightly increased border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #f0f0f0; /* Slightly darker background on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 100, 255, 0.5);
+}

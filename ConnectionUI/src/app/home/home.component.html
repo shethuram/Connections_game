@@ -1,0 +1,27 @@
+<div class="top-bar">
+    <div class="user-info">
+      <span>Welcome, {{ user.userName }}</span>
+      <span>Score: {{ user.score }}</span>
+    </div>
+  </div>
+  
+  <div class="carousel-container" >
+    <ngx-slick-carousel class="carousel" [config]="slideConfig" *ngIf="currentCarouselIndex < carousels.length">
+        <div ngxSlickItem>
+          <div class="slide">
+            <img [src]="carousels[currentCarouselIndex].images[0]" alt="slide image" class="slide-img"/>
+            <img [src]="carousels[currentCarouselIndex].images[1]" alt="slide image" class="slide-img"/>
+            <img [src]="carousels[currentCarouselIndex].images[2]" alt="slide image" class="slide-img"/>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+  </div>
+  
+  <div class="answer-section" *ngIf="currentCarouselIndex < carousels.length">
+    <input [(ngModel)]="userAnswer" placeholder="Enter your answer">
+    <button (click)="checkAnswer()">Submit</button>
+  </div>
+  
+  <div *ngIf="currentCarouselIndex >= carousels.length">
+    <h2>Congratulations! You have completed all the questions.</h2>
+  </div>

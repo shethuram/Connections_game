@@ -1,0 +1,22 @@
+<mat-sidenav-container class="sidenav-container" *ngIf="isLogin">
+    <mat-sidenav #sidenav mode="side">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/home" routerLinkActive="active" (click)="sidenav.toggle()">Home</a>
+        <a mat-list-item routerLink="/leaderboard" routerLinkActive="active" (click)="sidenav.toggle()">Leaderboard</a>
+        <a mat-list-item (click)="logout()">Logout</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Connections</span>
+        <span class="spacer"></span>
+      </mat-toolbar>
+      <div class="page-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>  
+<router-outlet *ngIf="!isLogin"></router-outlet>
